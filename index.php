@@ -34,9 +34,9 @@
             echo $texto;
 
             #ponemos la consulta en una variable
-            $consulta = "INSERT INTO informacion_personal (nombre_completo,telefono,email,mensaje)VALUES('$nombre_completo','$tel','$email','$texto')";
+            $consulta = "INSERT INTO INFORMACION_PERSONAL (NOMBRE_COMPLETO,TELEFONO,EMAIL,MENSAJE)VALUES('$nombre_completo','$tel','$email','$texto')";
             #ponemos la información de conexión en otra (ip/nombreDNS,usuario,contraseña,nombre base de datos)
-            $con=new mysqli('10.0.174.86:3306','root','','clusters');
+            $con=new mysqli('mysql:3306','root','proyecto','CLUSTERS');
             # hacemos la consulta con los datos de la conexión
             mysqli_query($con , $consulta);
             # cerramos conexión
